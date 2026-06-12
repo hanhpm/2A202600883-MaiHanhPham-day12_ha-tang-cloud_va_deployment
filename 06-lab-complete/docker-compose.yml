@@ -9,8 +9,9 @@ services:
       - ENVIRONMENT=staging
       - APP_NAME=Production AI Agent
       - REDIS_URL=redis://redis:6379/0
+      - AGENT_API_KEY=dev-key-change-me-in-production
     env_file:
-      - .env.local
+      - .env.example
     depends_on:
       redis:
         condition: service_healthy
